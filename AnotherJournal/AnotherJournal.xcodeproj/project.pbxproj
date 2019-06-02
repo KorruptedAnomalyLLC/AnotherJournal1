@@ -11,6 +11,10 @@
 		0C01F6AC22A30E84003EDBF6 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0C01F6AA22A30E84003EDBF6 /* Main.storyboard */; };
 		0C01F6AE22A30E85003EDBF6 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0C01F6AD22A30E85003EDBF6 /* Assets.xcassets */; };
 		0C01F6B122A30E85003EDBF6 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0C01F6AF22A30E85003EDBF6 /* LaunchScreen.storyboard */; };
+		0C01F6BB22A30FBE003EDBF6 /* Entry.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C01F6BA22A30FBE003EDBF6 /* Entry.swift */; };
+		0C01F6BE22A31102003EDBF6 /* EntryController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C01F6BD22A31102003EDBF6 /* EntryController.swift */; };
+		0C01F6C122A3354B003EDBF6 /* EntryListTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C01F6C022A3354B003EDBF6 /* EntryListTableViewController.swift */; };
+		0C01F6C422A431FD003EDBF6 /* EntryDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C01F6C322A431FD003EDBF6 /* EntryDetailViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -20,6 +24,10 @@
 		0C01F6AD22A30E85003EDBF6 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		0C01F6B022A30E85003EDBF6 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		0C01F6B222A30E85003EDBF6 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		0C01F6BA22A30FBE003EDBF6 /* Entry.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Entry.swift; sourceTree = "<group>"; };
+		0C01F6BD22A31102003EDBF6 /* EntryController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EntryController.swift; sourceTree = "<group>"; };
+		0C01F6C022A3354B003EDBF6 /* EntryListTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EntryListTableViewController.swift; sourceTree = "<group>"; };
+		0C01F6C322A431FD003EDBF6 /* EntryDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EntryDetailViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -54,6 +62,9 @@
 			children = (
 				0C01F6B822A30EAA003EDBF6 /* Resources */,
 				0C01F6B922A30ED8003EDBF6 /* Storyboards */,
+				0C01F6BC22A30FC2003EDBF6 /* Model */,
+				0C01F6BF22A31107003EDBF6 /* ModelController */,
+				0C01F6C222A3354F003EDBF6 /* ViewControllers */,
 			);
 			path = AnotherJournal;
 			sourceTree = "<group>";
@@ -75,6 +86,31 @@
 				0C01F6AF22A30E85003EDBF6 /* LaunchScreen.storyboard */,
 			);
 			path = Storyboards;
+			sourceTree = "<group>";
+		};
+		0C01F6BC22A30FC2003EDBF6 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				0C01F6BA22A30FBE003EDBF6 /* Entry.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		0C01F6BF22A31107003EDBF6 /* ModelController */ = {
+			isa = PBXGroup;
+			children = (
+				0C01F6BD22A31102003EDBF6 /* EntryController.swift */,
+			);
+			path = ModelController;
+			sourceTree = "<group>";
+		};
+		0C01F6C222A3354F003EDBF6 /* ViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				0C01F6C322A431FD003EDBF6 /* EntryDetailViewController.swift */,
+				0C01F6C022A3354B003EDBF6 /* EntryListTableViewController.swift */,
+			);
+			path = ViewControllers;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -148,6 +184,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0C01F6BE22A31102003EDBF6 /* EntryController.swift in Sources */,
+				0C01F6BB22A30FBE003EDBF6 /* Entry.swift in Sources */,
+				0C01F6C122A3354B003EDBF6 /* EntryListTableViewController.swift in Sources */,
+				0C01F6C422A431FD003EDBF6 /* EntryDetailViewController.swift in Sources */,
 				0C01F6A722A30E84003EDBF6 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -296,7 +336,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 5Z9AZ3J86W;
-				INFOPLIST_FILE = AnotherJournal/Info.plist;
+				INFOPLIST_FILE = "$(SRCROOT)/AnotherJournal/Resources/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -314,7 +354,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 5Z9AZ3J86W;
-				INFOPLIST_FILE = AnotherJournal/Info.plist;
+				INFOPLIST_FILE = "$(SRCROOT)/AnotherJournal/Resources/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
