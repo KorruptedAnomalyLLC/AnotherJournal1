@@ -42,6 +42,15 @@ class EntryListTableViewController: UITableViewController {
 
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
  
+        if segue.identifier == "toShowEntry" {
+            
+            if let detailViewController = segue.destination as?
+            EntryDetailViewController,
+                let selectedRow = tableView.indexPathForSelectedRow?.row {
+                
+                let entry = EntryController.shared.entries[selectedRow]
+                detailViewController.entry = entry
+            }
+        }
     }
-
 }
