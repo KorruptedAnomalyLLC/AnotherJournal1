@@ -15,6 +15,10 @@ class EntryController {
     //    Drawing from EntryController
     static let shared = EntryController()
     
+    init() {
+        loadFromPersistentStorage()
+    }
+    
     //  CRUD
     
     //    Adding a title and text
@@ -23,6 +27,8 @@ class EntryController {
         let entry = Entry(title: title, bodyText: text)
         //        Officially adding/appending to the entries array
         entries.append(entry)
+        
+        saveToPersistentStorage()
     }
     
     //  Remove entry from entries array
